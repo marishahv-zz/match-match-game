@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Superhero Memory Game</title>
+      <link type="text/css" rel="stylesheet" href="stylesheets/main.css" media="screen">
+  </head>
+  <body>
+    <header class="clearfix">     
+      <ul class="top-menu">
+        <li class="menu-item-left"><a href="#">Game Difficulty:</a>
+          <div class="dropdown hidden">            
+            <span>low</span>
+            <span>Medium</span>
+            <span>High</span>
+          </div>
+        </li>        
+        <li class="menu-item-right"><a href="#">Skirt Cards:</a>
+          <div class="dropdown hidden">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </li>
+        <li class="start-button"><a href="#">Start Game</a>
+        <li><span>Game Duration: <time></time></span></li>
+      </ul>    
+    </header>
+    <main>      
+      <div id="memory_board">
+        <div class="content-wrapper">          
+          <h1 class="content-center-align">Match-Match Game</h1>
+          <p>The object of the game is to collect the most matching pairs.</p>
+          <div class="clearfix">
+            <figure class="content-rule left">
+              <h3 class="content-left-align">How to play:</h3>
+              <ol>
+                <li>Select two cards to try to match the pictures.</li>
+                <li>If you match the pictures, you can go again.</li>
+                <li>If you don't match, it is the computer turn them.</li>
+                <li>The player that findes all pairs - wins!</li>
+                <li>Have fun!</li>
+              </ol>
+            </figure>          
+            <form class="profile right">
+              <fieldset>
+                <legend>Please fill in:</legend>
+                <div>
+                  <label for="firstname">First Name:</label>
+                  <input id="firstname" type="text" placeholder="your first name*" required>
+                </div>
+                <div>
+                  <label for="lastname">Last Name:</label>
+                  <input id="lastname" type="text" placeholder="your last name*" required>
+                </div>
+                <div>
+                  <label for="email">Email:</label>
+                  <input id="email" type="email" placeholder="your email*" required>                
+                </div>
+                <input id="submit" type="submit" value="Create Profile">
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <p class="congrats hidden"><span></span>, congratulations! You've won!</p>
+        <div class="grid-container"></div>
+      </div>
+    </main>      
+      <script type="text/javascript" src="src/memory.js"></script>
+      <script type="text/javascript" src="src/utils.js"></script>
+      <script type="text/javascript" src="src/main.js"></script>   
+    </body>
+</html>

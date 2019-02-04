@@ -1,0 +1,288 @@
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  width: 100%;
+  clear: both;
+} 
+
+html {
+  height: 100%; 
+  background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
+  font-family: "Helvetica Neue", Arial, sans-serif;  
+}
+
+#memory_board {
+  background:#edd7ce;
+	width: 950px;	
+	padding: 70px;
+	margin: 100px auto;
+  border-radius: 84px;
+  box-shadow: inset 0px 0px 20px -6px rgba(97,89,97,1);
+  margin-bottom: 105px; 
+}
+
+h1 {  
+  color: rgba(215, 40, 40, 0.9);
+  font-weight: bolder;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0px 0px 20px rgba(150, 150, 150, 1);
+  margin-bottom: 30px;
+}
+
+h2, .congrats {
+  font-size: 32px; 
+}
+
+h2, h3, .congrats {  
+  font-weight: bolder;  
+  margin-bottom: 20px;  
+  color: rgba(215, 40, 40, 0.9);
+  text-shadow: 0px 0px 20px rgba(150, 150, 150, 0.8);
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.congrats {
+  font-size: 36px; 
+}
+
+.top-menu {    
+    float: right;   
+    padding-top: 6px;    
+    list-style-type: none;    
+    background-color: rgba(173, 53, 53, 0.8);    
+}
+
+.top-menu li {
+  float: left;
+  position: relative;
+}
+
+.top-menu li a, .top-menu li span {
+  display: block;
+  color: #dbcece;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+.top-menu li a {
+  border-right: 2px solid #8a3535;
+}
+
+.top-menu li a:hover {
+  background-color: #8a3535;
+  cursor: pointer;    
+}
+
+.dropdown {  
+  height: 160px;
+  background-color: rgba(173, 53, 53, 0.8);
+  position: absolute; 
+  top: 59px; 
+  left: 0;    
+}
+
+.menu-item-left .dropdown {
+  width: 144px;   
+}
+
+.menu-item-right .dropdown {
+  width: 116px;  
+}
+
+.dropdown span:hover, .dropdown div:hover {   
+  cursor: pointer;    
+}
+
+.active {
+  border: 2px solid #8a3535;
+}
+
+.dropdown div { 
+  box-sizing: border-box; 
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;    
+}
+
+.dropdown span {
+  box-sizing: border-box; 
+}
+
+.dropdown div:first-child {
+  background-color: #a22f42; 
+}
+
+.dropdown div:nth-child(2) {
+  background-color: #ecb51d; 
+}
+
+.dropdown div:last-child {
+  background-color: #738aa0; 
+}
+
+.content-rule {
+  width: 35%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.content-center-align {
+  text-align: center;
+}
+
+.content-left-align {
+  text-align: left;
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  color: #464749;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.profile {
+  width: 400px; 
+  margin-top: 20px; 
+}
+
+fieldset {
+  height: 160px;
+  padding: 20px 0px 10px 40px;
+  border: none;
+}
+
+fieldset div {
+  margin-bottom: 10px;
+}
+
+legend {
+  font-weight: 700;  
+  font-size: 24px;   
+  color: rgba(215, 40, 40, 0.9);
+  text-shadow: 0px 0px 20px rgba(150, 150, 150, 0.8);
+}
+
+.profile label {      
+  cursor: pointer;
+  font-size: 0.98em; 
+}
+
+input[type=text],
+input[type=email] {
+  width: 250px;
+  height: 23px;
+  background-color: hsl(16, 33%, 89%);
+  margin-left: 10px;
+  font-style: italic;
+  padding-left: 7px;  
+}
+
+input[type=email] {
+  margin-left: 46px;
+}
+
+input[type=submit] {
+  display:block;
+  width: 150px;
+  height: 25px;
+  background-color: hsl(16, 33%, 89%);
+  margin-left: 150px; 
+}
+
+.hidden {
+  display: none;
+}
+
+/*///////////grid////////////*/
+
+.grid-container {
+  display: grid;  
+  grid-template-columns: repeat(6, 140px);
+  grid-gap: 23px;  
+}
+
+.grid-item {  
+  transform-style: preserve-3d;  
+  position: relative;   
+}
+
+.grid-item img { 
+  width: 100%;  
+}
+
+.back-side {  
+  position: relative;
+  height: 140px;
+}
+
+.front-side {  
+  height: 140px;
+  width: 100%;
+  background-color: #738aa0;   
+  position:  absolute;
+  top: 0;
+  left: 0;  
+}
+
+@keyframes rotate {
+  from {transform: rotateY(0);}
+  to {transform: rotateY(180deg);}   
+} 
+
+@keyframes rotate-reverse {
+  from {transform: rotateY(180deg);}
+  to {transform: rotateY(0);}   
+} 
+
+@keyframes disapear {  
+  from {opacity: 1}
+  to {opacity: 0;
+      visibility: hidden;}
+} 
+
+.transform-rotate {
+  transform:  rotateY(180deg);
+  transform-origin: center;
+}
+
+.transform-disapear {
+  opacity: 0;
+}
+
+.animate-rotate {   
+  animation: rotate 1s linear;
+  animation-fill-mode: both;  
+}
+
+.animate-reverse {  
+  animation: rotate-reverse 1s linear;  
+}
+
+.animate-disapear {  
+  animation: disapear 0.7s ease forwards 1  
+}
+
